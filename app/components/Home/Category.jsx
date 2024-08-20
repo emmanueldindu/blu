@@ -7,7 +7,7 @@ import history from "../../../assets/images/history.png";
 
 const Category = () => {
   return (
-    <View className="p-4 h-[80px] w-full  items-center justify-between flex-row">
+    <View className="px-7  h-[100px] w-full items-center justify-between flex-row">
       <View className="grid gap-2 justify-center items-center ">
         <Ionicons name="heart-outline" size={20} />
         <Text className="text-xs font-[600]">Saved</Text>

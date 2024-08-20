@@ -5,7 +5,7 @@ import { Ionicons } from '@expo/vector-icons'
 const Header = () => {
   return (
     <View className="w-full px-4">
-        <View className="h-[80px] justify-between flex-row">
+        <View className="h-[60px] justify-between flex-row">
           <View className="w-[60%]  h-full p-4 grid">
             <Text className="text-[#BEBEBE] font-[300] text-sm">
               Your Location

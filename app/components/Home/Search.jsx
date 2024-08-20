@@ -4,7 +4,7 @@ import { Feather } from '@expo/vector-icons'
 
 const Search = () => {
   return (
-    <View className='px-4'>
+    <View className='px-7'>
     <View className="flex-row bg-[#F5F5F5]   content-center    rounded-3xl px-3 my-6 h-14 w-full">
           <TouchableOpacity className="my-auto">
             <Feather name="search" size={19} className="my-auto" />
