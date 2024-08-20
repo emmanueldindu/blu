@@ -14,9 +14,9 @@ const Header = () => {
           </View>
 
           <View className="w-[40%] h-full items-center gap-x-5 justify-end  flex-row ">
-            <Ionicons name="headset-outline" size={21} />
+            <Ionicons name="headset-outline" size={23} />
 
-            <Ionicons name="notifications-outline" size={21} />
+            <Ionicons name="notifications-outline" size={23} />
           </View>
         </View>
       </View>

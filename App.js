@@ -8,6 +8,7 @@ import Home from "./app/tabs/Home";
 import Upcoming from "./app/tabs/Upcoming";
 import Learn from "./app/tabs/Learn";
 import Account from "./app/tabs/Account";
+import Details from "./app/screens/Details";
 
 // com.odoi.axvid
 const Stack = createNativeStackNavigator();
@@ -48,6 +49,12 @@ export default function App() {
         <Stack.Screen
           name="Account"
           component={Account}
+          options={{ headerShown: false }}
+        ></Stack.Screen>
+
+        <Stack.Screen
+          name="Details"
+          component={Details}
           options={{ headerShown: false }}
         ></Stack.Screen>
       </Stack.Navigator>

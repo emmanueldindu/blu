@@ -2,13 +2,18 @@ import { View, Text, TouchableOpacity, Image } from "react-native";
 import React from "react";
 import { doctors } from "../../../assets/data";
 import { Ionicons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 const DoctorList = () => {
+
+    const navigation = useNavigation()
+
   return (
     <View className=" items-center gap-y-2 flex-wrap  justify-between p-4  flex-1 flex-row w-[100%] ">
       {doctors.map((item, index) => (
         <TouchableOpacity
           key={index}
+          onPress={() => navigation.navigate('Details', {item})}
           className="rounded-2xl  h-[240px] grid mx-auto w-[45%]"
         >
           <Image
