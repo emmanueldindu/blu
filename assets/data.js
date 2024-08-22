@@ -15,7 +15,7 @@ export const doctors = [
 
     {
         name: 'Marylukan Ada',
-        star: 4.7,
+        star: 4.2,
         role: 'Physiotherapist',
         price: 1800,
         location: 'Anambra, Nigeria',
@@ -30,7 +30,7 @@ export const doctors = [
 
     {
         name: 'Justin Sim',
-        star: 4.3,
+        star: 3.3,
         role: 'Physiotherapist',
         price: 5800,
         location: 'Lagos, Nigeria',
@@ -47,7 +47,7 @@ export const doctors = [
 
     {
         name: 'Jenny Wilson',
-        star: 4.7,
+        star: 2.7,
         role: 'Dentist',
         price: 5800,
         location: 'Texas, USA',
@@ -63,7 +63,7 @@ export const doctors = [
 
     {
         name: 'Temple Will',
-        star: 4.7,
+        star: 2.7,
         role: 'Dentist',
         price: 1800,
         location: 'Texas, USA',
@@ -96,7 +96,7 @@ export const doctors = [
 
     {
         name: 'Uzo Esther',
-        star: 4.1,
+        star: 4.3,
         role: 'Pharmacists',
         price: 2400,
         location: 'Enugu, Nigeria',
@@ -126,7 +126,7 @@ export const doctors = [
 
     {
         name: 'Augustin Han',
-        star: 4.1,
+        star: 3.4,
         role: 'Physiotherapist',
         price: 2400,
         location: 'Nsukka, Nigeria',
@@ -158,7 +158,7 @@ export const doctors = [
 
     {
         name: 'Matteo Yuki',
-        star: 4.1,
+        star: 3.1,
         role: 'Dietitian',
         price: 1300,
         location: 'Nsukka, Nigeria',

@@ -5,6 +5,7 @@ import {
   SafeAreaView,
   Image,
   FlatList,
+  ScrollView,
 } from "react-native";
 import React, { useLayoutEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
@@ -13,7 +14,8 @@ import { useRoute } from "@react-navigation/native";
 import user from "../../assets/images/user.png";
 import { Calendar } from "react-native-calendars";
 import Availability from "../components/Details/Availability";
-
+import Reviews from "../components/Details/Reviews";
+import About from "../components/Details/About";
 const Details = () => {
   const navigation = useNavigation();
   const route = useRoute();
@@ -33,9 +35,7 @@ const Details = () => {
         );
       case "About":
         return (
-          <View style={{ flex: 1, padding: 20 }}>
-            <Text>About Section</Text>
-          </View>
+          <About /> 
         );
       default:
         return null;
@@ -44,6 +44,7 @@ const Details = () => {
 
   return (
     <SafeAreaView className="bg-white h-full ">
+        <ScrollView>
       <View className="w-full flex-row px-6 h-[80px] bg-white justify-between">
         <View className="w-[50%] my-auto">
           <TouchableOpacity
@@ -132,6 +133,7 @@ const Details = () => {
 
       {/* Tab Content */}
       <View style={{ flex: 1 }}>{renderContent()}</View>
+      </ScrollView>
     </SafeAreaView>
   );
 };

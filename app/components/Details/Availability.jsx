@@ -1,10 +1,17 @@
 import { View, Text, TouchableOpacity, FlatList } from 'react-native'
-import React, {useState} from 'react'
+import React, {useState, useRef} from 'react'
 import { Calendar } from 'react-native-calendars';
+import { Modalize } from 'react-native-modalize';
 
 const Availability = () => {
     const [selected, setSelected] = useState("");
     const times = ["01:00 AM", "02:00 AM", "03:00 AM"];
+    const modalizeRef = useRef(null);
+
+    const onOpen = () => {
+      modalizeRef.current?.open();
+    };
+  
   return (
     <View style={{ flex: 1, padding: 20 }}>
     <Calendar
