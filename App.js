@@ -9,6 +9,9 @@ import Upcoming from "./app/tabs/Upcoming";
 import Learn from "./app/tabs/Learn";
 import Account from "./app/tabs/Account";
 import Details from "./app/screens/Details";
+import Booking from "./app/page/Booking";
+
+
 
 // com.odoi.axvid
 const Stack = createNativeStackNavigator();
@@ -19,6 +22,11 @@ export default function App() {
         <Stack.Screen
           name="ButtonTab"
           component={ButtonTab}
+          options={{ headerShown: false }}
+        ></Stack.Screen>
+        <Stack.Screen
+          name="Details"
+          component={Details}
           options={{ headerShown: false }}
         ></Stack.Screen>
 
@@ -53,10 +61,21 @@ export default function App() {
         ></Stack.Screen>
 
         <Stack.Screen
+        name="Booking"
+        component={Booking}
+        options={{headerShown: false}}
+        >
+
+        </Stack.Screen>
+
+        {/*  */}
+
+        {/* 
+        <Stack.Screen
           name="Details"
           component={Details}
           options={{ headerShown: false }}
-        ></Stack.Screen>
+        ></Stack.Screen> */}
       </Stack.Navigator>
     </NavigationContainer>
   );

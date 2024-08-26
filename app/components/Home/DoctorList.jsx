@@ -13,7 +13,7 @@ const DoctorList = () => {
       {doctors.map((item, index) => (
         <TouchableOpacity
           key={index}
-          onPress={() => navigation.navigate('Details', {item})}
+          onPress={() => navigation.navigate('Booking', {item})}
           className="rounded-2xl  h-[240px] grid mx-auto w-[45%]"
         >
           <Image

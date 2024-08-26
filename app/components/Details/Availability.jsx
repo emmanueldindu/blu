@@ -1,16 +1,16 @@
-import { View, Text, TouchableOpacity, FlatList } from 'react-native'
+import { View, Text, TouchableOpacity, FlatList, Dimensions } from 'react-native'
 import React, {useState, useRef} from 'react'
 import { Calendar } from 'react-native-calendars';
-import { Modalize } from 'react-native-modalize';
+import RBSheet from 'react-native-raw-bottom-sheet';
+import { Ionicons } from '@expo/vector-icons';
 
 const Availability = () => {
     const [selected, setSelected] = useState("");
     const times = ["01:00 AM", "02:00 AM", "03:00 AM"];
-    const modalizeRef = useRef(null);
+    const refRBSheet = useRef();
 
-    const onOpen = () => {
-      modalizeRef.current?.open();
-    };
+    const screenHeight = Dimensions.get('window').height;
+    const sheetHeight = screenHeight * 0.85;
   
   return (
     <View style={{ flex: 1, padding: 20 }}>
@@ -63,9 +63,35 @@ const Availability = () => {
       />
     </View>
 
-    <TouchableOpacity className='w-[95%] h-[48px] items-center justify-center rounded-[30px] mt-5 bg-[#00472B] mx-auto' >
+    <TouchableOpacity onPress={() => refRBSheet.current.open()} className='w-[95%] h-[48px] items-center justify-center rounded-[30px] mt-5 bg-[#00472B] mx-auto' >
         <Text className='text-white'>Book a call</Text>
     </TouchableOpacity>
+    <RBSheet
+        ref={refRBSheet}
+        height={sheetHeight}
+        openDuration={250}
+        customStyles={{
+          container: {
+            // justifyContent: "center",
+            // alignItems: "center",
+            borderTopLeftRadius: 20,
+            borderTopRightRadius: 20
+          }
+        }}
+      >
+<View className='p-4 flex gap-x-3 '>
+  <TouchableOpacity onPress={() =>	refRBSheet.current.close()} className='flex-row gap-x-1 mt-4' >
+    <Ionicons
+    name='chevron-back-outline'
+    size={19}
+    />
+    <Text>cancel</Text>
+
+</TouchableOpacity>
+
+
+</View>
+      </RBSheet>
   </View>
   )
 }
